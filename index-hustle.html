@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Hustle Kit — PDF + Checklist</title>
+  <meta name="description" content="Launch your AI side hustle in 24h" />
+  
+  <style>
+    :root { --bg:#0b0f19; --card:#111827; --muted:#9ca3af; --text:#f9fafb; --acc:#22c55e; --cta:#3b82f6; }
+    *{box-sizing:border-box;} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;background:var(--bg);color:var(--text);}
+    .wrap{max-width:960px;margin:0 auto;padding:24px;}
+    .hero{display:grid;grid-template-columns:1.1fr 0.9fr;gap:24px;align-items:center;}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:22px;box-shadow:0 12px 40px rgba(0,0,0,0.35);}
+    .title{font-size:clamp(28px,3.6vw,44px);line-height:1.08;margin:0 0 10px;}
+    .subtitle{color:var(--muted);margin:0 0 18px;font-size:16px;}
+    .badges{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 20px;}
+    .badge{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);padding:6px 10px;border-radius:999px;font-size:12px;color:#e5e7eb;}
+    .price{font-size:18px;margin:8px 0 18px;}
+    .price del{color:#9ca3af;margin-right:8px;}
+    .cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--cta);color:#fff;border:0;padding:14px 18px;font-weight:700;border-radius:14px;text-decoration:none;cursor:pointer;transition:transform .08s ease,filter .15s;}
+    .cta:hover{transform:translateY(-1px);filter:brightness(1.08);}
+    .cta:active{transform:translateY(0);}
+    .cover{aspect-ratio:4/5;width:100%;background:#0f172a;border:1px solid rgba(255,255,255,0.1);border-radius:20px;display:grid;place-items:center;font-weight:700;color:#e5e7eb;}
+    .cover img{max-width:100%;border-radius:20px;}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px;}
+    .li{background:var(--card);border:1px solid rgba(255,255,255,0.08);padding:14px;border-radius:16px;color:#e5e7eb;font-size:14px;}
+    .muted{color:var(--muted);font-size:13px;}
+    .section{margin-top:42px;}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+    .faq{display:grid;grid-template-columns:1fr;gap:12px;}
+    details{background:var(--card);padding:14px 16px;border-radius:14px;border:1px solid rgba(255,255,255,0.08);}
+    summary{cursor:pointer;font-weight:600;}
+    .download{display:none;margin-top:18px;padding:18px;border:1px dashed rgba(34,197,94,0.5);border-radius:14px;background:rgba(34,197,94,0.08);}
+    .download a{display:inline-block;margin-right:12px;margin-bottom:10px;background:var(--acc);color:#00140a;text-decoration:none;padding:10px 12px;border-radius:10px;font-weight:700;}
+    .foot{margin:36px 0 12px;color:var(--muted);font-size:12px;text-align:center;}
+    .note{background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.28);padding:10px 12px;border-radius:12px;font-size:13px;}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;}.features{grid-template-columns:1fr;}.grid{grid-template-columns:1fr;}}
+  </style>
+
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="card">
+        <h1 class="title">📘 AI Hustle Kit</h1>
+        <p class="subtitle">Launch your AI side hustle in 24h</p>
+        <div class="badges">
+          <span class="badge">🔥 AI + money</span>
+          <span class="badge">⏱ 24h launch</span>
+          <span class="badge">💳 USDT/USDC/ETH/BTC</span>
+        </div>
+        <p class="price"><del>$49</del><strong>$19</strong> today</p>
+        <a class="cta" id="payBtn" href="https://nowpayments.io/payment/?iid=5067395544">
+          Buy Now
+        </a>
+        <p class="muted" style="margin-top:10px">Tip: set <code>success_url</code> in NOWPayments to <code>https://yourdomain/?paid=1</code>.</p>
+        <div class="download" id="downloadBox">
+          <strong>Payment confirmed ✅ Download your files:</strong>
+          <div style="margin-top:10px">
+            <a id="dlGuide" href="AI_Money_Blueprints.pdf" target="_blank">Download: AI Money Blueprints</a>
+            <a id="dlChecklist" href="AI_24h_Launch_Checklist.pdf" target="_blank">Download: 24h Checklist</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="cover"><img src="cover-blueprints.png" alt="Cover" style="width:100%;border-radius:20px;"/></div>
+        <div class="grid">
+          <div class="li">⚡ 30 AI-based systems</div>
+          <div class="li">🧠 Ready-to-use prompts</div>
+          <div class="li">📈 24h launch checklist</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="features">
+        <div class="card"><strong>Who is it for</strong><br/><span class="muted">Freelancers, marketers, entrepreneurs, anyone monetizing AI skills.</span></div>
+        <div class="card"><strong>What’s inside</strong><br/><span class="muted">Checklists, ChatGPT & Midjourney prompts, niche examples, pricing.</span></div>
+        <div class="card"><strong>Result</strong><br/><span class="muted">First sales in 24h + 7-day scaling roadmap.</span></div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h3 style="margin-top:0">FAQ</h3>
+      <div class="faq">
+        <details><summary>How do I get the files?</summary><div class="muted">After successful payment, NOWPayments redirects you back (if success_url is set) and unlocks download buttons.</div></details>
+        <details><summary>Which networks are supported?</summary><div class="muted">USDT/USDC (TRC-20, ERC-20), ETH, BTC etc.</div></details>
+        <details><summary>Refund policy?</summary><div class="muted">Digital product. If download issues — contact support.</div></details>
+      </div>
+      <p class="note" style="margin-top:14px">Tech note: set <code>success_url=https://yourdomain/?paid=1</code> when creating invoice.</p>
+    </section>
+
+    <section class="section" style="text-align:center">
+      <a class="cta" href="https://nowpayments.io/payment/?iid=5067395544">Buy for $19</a>
+      <p class="muted" style="margin-top:8px">Instant delivery. Crypto only.</p>
+    </section>
+
+    <footer class="foot">© 2025 AI Hustle Kit · Support: you@example.com</footer>
+  </div>
+
+  <script>
+    (function(){
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('paid') === '1') {
+        const box = document.getElementById('downloadBox');
+        if (box) box.style.display = 'block';
+      }
+    })();
+  </script>
+</body>
+</html>
